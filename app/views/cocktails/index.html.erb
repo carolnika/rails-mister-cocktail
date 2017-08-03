@@ -1,0 +1,11 @@
+<div class='container'>
+
+<h1>Cocktails</h1>
+
+  <ul style="list-style-type: none">
+  <h4><%= link_to "Create a new cocktail", new_cocktail_path %></h4>
+    <% @cocktails.each do |cocktail| %>
+    <li><h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2></li>
+  <%end%>
+  </ul>
+</div>
